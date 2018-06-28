@@ -11,5 +11,17 @@ let mix = require('laravel-mix');
  |
  */
 
+mix.webpackConfig({
+    module: {
+        loaders: [{
+            test: /\.styl$/,
+            exclude: /node_modules\/.*/,
+            loader: 'stylus-loader'
+        }]
+    }
+});
+
 mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+    .js('resources/assets/js/login.js', 'public/js')
+    .sass('resources/assets/sass/app.scss', 'public/css')
+    .stylus('resources/assets/stylus/app.styl', 'public/css/vuetify.css');
