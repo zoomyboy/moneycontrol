@@ -1,0 +1,3 @@
+[submodule "packages/vuetify-preset"]
+	path = packages/vuetify-preset
+	url = git@github.com:zoomyboy/vuetify-preset.git
